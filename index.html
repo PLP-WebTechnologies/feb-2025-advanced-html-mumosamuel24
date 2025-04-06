@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assigned tasks</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Assigned Tasks</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg" 
          alt="Sample Image" 
-         width="400" 
-         height="300">
+         class="styled-image">
 
-    <table border="1">
+    <table class="styled-table">
         <thead>
             <tr>
                 <th>Name</th>
@@ -22,26 +21,25 @@
             </tr>
         </thead>
         <tbody>
-                 </tbody>
+        </tbody>
     </table>
 
-    <form id="registration" novalidate>
+    <form id="registration" class="form-container" novalidate>
         <fieldset>
             <legend>Registration Form</legend>
-            
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Enter full name">
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required placeholder="example@domain.com">
-            
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required 
                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-            
+
             <label for="birthdate">Birthdate:</label>
             <input type="date" id="birthdate" name="birthdate" required>
-
 
             <label for="country">Country:</label>
             <select id="country" name="country">
@@ -49,15 +47,14 @@
                 <option value="254">Kenya</option>
                 <option value="ug">Uganda</option>
                 <option value="tz">Tanzania</option>
-                <option value="br">burundi</option>
+                <option value="br">Burundi</option>
             </select>
 
-
-            <div>
+            <div class="gender-container">
                 <span>Gender:</span>
                 <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label>
-                
+
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
             </div>
