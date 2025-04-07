@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 1fr;
+      height: 100vh;
+    }
+    header {
+      grid-area: header;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    main {
+      grid-area: main;
+      padding: 2rem;
+    }
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header header"
+          "main sidebar"
+          "footer footer";
+        grid-template-columns: 3fr 1fr; /* Main content and sidebar */
+        grid-template-rows: auto 1fr auto;
+        gap: 1rem; /* Space between sections */
+      }
+      aside {
+        grid-area: sidebar;
+        background-color: #f4f4f4;
+        padding: 1rem;
+        border-left: 2px solid #ccc;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      nav ul li {
+        margin-right: 2rem; /* Increase spacing on larger screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h1>Welcome to the Responsive Webpage</h1>
+      <p>This is the main content area. Resize the browser to see how the layout adjusts.</p>
+    </main>
+
+    <!-- Sidebar (visible on tablets and desktops) -->
+    <aside>
+      <h2>Sidebar</h2>
+      <p>Additional content goes here.</p>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Responsive Webpage. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
